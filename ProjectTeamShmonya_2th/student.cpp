@@ -460,50 +460,38 @@ void rewriteFileStudents(Student* students, string fileName)
 {
     ofstream file(fileName);
     for (int i = 0; i < DEFAULT_SIZE; i++) {
+        Student student = *(students + i);
         if (!objectIsNull(*(students + i))) {
-            file << (students + i)->login << endl;
-            file << (students + i)->password << endl;
-            file << (students + i)->name << endl;
+            file << student.login << endl;
+            file << student.password << endl;
+            file << student.name << endl;
             int sum = 0;
+            int count = 0;
             for (int j = 0; j < 8; j++) {
-                switch (j) {
-                case 0: file << "cycles: "; break;
-                case 1: file << "array: "; break;
-                case 2: file << "string: "; break;
-                case 3: file << "recursion: "; break;
-                case 4: file << "struct: "; break;
-                case 5: file << "files: "; break;
-                case 6: file << "address: "; break;
-                case 7: file << "dinamic: "; break;
-                }
-                int grade = (students + i)->grades[j];
+                int grade = student.grades[j];
                 sum += grade;
-                if (grade == 0) {
-                    file << endl;
+                if (grade > 0)
+                {
+                    count++;
                 }
-                else {
-                    file << grade << endl;
+                switch (j) {
+                case 0: file << "cycles: "; file << grade << endl; break;
+                case 1: file << "array: "; file << grade << endl; break;
+                case 2: file << "string: "; file << grade << endl; break;
+                case 3: file << "recursion: "; file << grade << endl; break;
+                case 4: file << "struct: "; file << grade << endl; break;
+                case 5: file << "files: "; file << grade << endl; break;
+                case 6: file << "address: "; file << grade << endl; break;
+                case 7: file << "dinamic: "; file << grade << endl; break;
                 }
             }
-            file << "final: ";
-            int final = (students + i)->final;
-            if (final == 0) {
-                file << endl;
-            }
-            else {
-                file << final << endl;
-            }
-            file << "average: ";
-            double average = sum / 8.0;
-            if (average == 0) {
-                file << endl;
-            }
-            else {
-                file << average << endl;
-            }
+
+            file << "final: " << student.final << endl;
+            file << "average: " << sum / double(count) << endl;
         }
     }
 }
+
 int getTopicIndex(string topicName)
 {
     if (topicName.compare("Циклы") == 0)
