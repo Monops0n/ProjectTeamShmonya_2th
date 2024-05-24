@@ -127,13 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mainstudent.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Sourcecode.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="TeacherBranch\Header_teach.cpp" />
+    <ClCompile Include="TeacherBranch\TeacherBranch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header student.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="headerstudent.h" />
+    <ClInclude Include="TeacherBranch\Header_teach.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
