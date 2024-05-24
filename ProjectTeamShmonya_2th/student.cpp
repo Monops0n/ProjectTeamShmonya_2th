@@ -1,14 +1,3 @@
-#include <stdlib.h>
-#include <Windows.h>
-#include <algorithm>
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <Windows.h>
-#include <stdio.h>
-#include "header student.h"
-
-using namespace std;
 
 void clear()
 {

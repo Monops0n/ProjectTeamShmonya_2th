@@ -1,14 +1,4 @@
-#include <stdlib.h>
-#include <Windows.h>
-#include <algorithm>
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <Windows.h>
-#include <stdio.h>
-#include "header student.h"
-using namespace std;
-int main()
+int student()
 {
     string studentFile = "C:/Users/Руслан/source/repos/Test/Test/data.txt";
     string questionFile = "C:/Users/Руслан/source/repos/Test/Test/Tests.txt";

@@ -1,6 +1,3 @@
-#pragma once
-#define DEFAULT_SIZE 100
-using namespace std;
 struct Student {
     string login;
     string password;

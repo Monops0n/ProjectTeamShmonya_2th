@@ -16,5 +16,6 @@
 using namespace std;
 
 void Shifr();
-void teacher();
+int teacher();
 void clear();
+int student();

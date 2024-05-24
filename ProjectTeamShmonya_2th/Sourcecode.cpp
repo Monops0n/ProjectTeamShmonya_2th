@@ -54,10 +54,6 @@ void Shifr()
 	remove("Tests.txt");
 	rename("vremenn.txt", "Tests.txt");
 }
-void teacher()
-{
-	cout << "Hello" << endl;
-}
 
 void clear()
 {
