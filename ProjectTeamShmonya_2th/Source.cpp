@@ -2,9 +2,7 @@
 
 void main()
 {
-
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    setlocale(LC_ALL, "ru");
     Shifr();
     int zadanie;
     do
@@ -25,8 +23,8 @@ void main()
         cin >> zadanie;
         switch (zadanie)
         {
-        case 1: student(); break;
-        case 2: teacher(); break;
+        case 1: mainstudent(); break;
+        case 2: mainteacher(); break;
         case 3: cout << "\tВыход из программы....." << endl << endl << endl; break;
         }
         if (zadanie != 1 && zadanie != 2 && zadanie != 3) cout << "\tТакого варианта нет, попробуйте ещё раз..." << endl << endl; Sleep(1000);

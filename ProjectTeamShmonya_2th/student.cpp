@@ -1,9 +1,4 @@
-
-void clear()
-{
-    system("cls");
-}
-
+#include "headerstudent.h"
 
 
 bool objectIsNull(Student student)
@@ -92,14 +87,14 @@ string getQuestionNumberFromString(string& str) {
 
 void removeSpaceAndAlpha(string& str)
 {
-    str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
-    str.erase(remove_if(str.begin(), str.end(), isalpha), str.end());
+    str.erase(std::remove_if(str.begin(), str.end(), (int(*) (int)) std::isspace), str.end());;
+    str.erase(std::remove_if(str.begin(), str.end(), (int(*) (int)) std::isspace), str.end());
 }
 
 void removeSpaceAndDigit(string& str)
 {
-    str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
-    str.erase(remove_if(str.begin(), str.end(), isdigit), str.end());
+    str.erase(std::remove_if(str.begin(), str.end(), (int(*) (int)) std::isspace), str.end());
+    str.erase(std::remove_if(str.begin(), str.end(), (int(*) (int)) std::isspace), str.end());
 }
 
 int parseTopicOrFinalAndGetGrade(string topic, string str)
@@ -191,7 +186,7 @@ void readGradeFromRow(Student* student, string str)
 
 void readFileRow(Topic* topic, string str)
 {
-    if (all_of(str.begin(), str.end(), isalpha))
+    if (all_of(str.begin(), str.end(), (int(*) (int)) std::isalpha))
     {
         topic->name = str;
     }

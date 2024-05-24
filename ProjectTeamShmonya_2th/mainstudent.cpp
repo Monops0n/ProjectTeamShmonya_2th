@@ -1,4 +1,6 @@
-int student()
+#include "headerstudent.h"
+
+void mainstudent()
 {
     string studentFile = "C:/Users/Руслан/source/repos/Test/Test/data.txt";
     string questionFile = "C:/Users/Руслан/source/repos/Test/Test/Tests.txt";
@@ -55,6 +57,5 @@ int student()
     free(topics);
     delete[]topics;
     delete[]students;
-    return 0;
-
+    
 }

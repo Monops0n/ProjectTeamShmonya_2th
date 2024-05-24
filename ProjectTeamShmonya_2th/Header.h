@@ -1,4 +1,3 @@
-#pragma once
 #include <stdlib.h>
 #include <Windows.h>
 #include <algorithm>
@@ -16,6 +15,6 @@
 using namespace std;
 
 void Shifr();
-int teacher();
+void mainteacher();
 void clear();
-int student();
+void mainstudent();
